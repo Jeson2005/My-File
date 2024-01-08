@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Form</title>
+</head>
+<body>
+	<form id="myForm">
+		<table>
+			<tr>
+				<td id="fname">First Name: <input type="text" name="fname" placeholder="Enter your First name"></td>
+			</tr>
+			<tr>
+				<td id="sname">Second Name: <input type="text" name="sname" placeholder="Enter your Second name"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="doSubmit()" value="Submit" name=""></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function doSubmit() {
+			var fname = document.getElementById("myForm").elements.namedItem("fname").value,
+			sname = document.getElementById("myForm").elements.namedItem("sname").value;
+
+			document.getElementById("fname").innerHTML = "First Name: " + fname;
+			document.getElementById("sname").innerHTML = "Second Name: " + sname;
+		}
+	</script>
+</body>
+</html>

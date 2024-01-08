@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Azeret Mono">
+	<script src="index.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="main.html"><h1>My Portfolio</h1></a>
+		<div class="tabs">
+			<a class="tablink" onclick="openPage('History')">HISTORY</a>
+			<a class="tablink" onclick="openPage('Html')">HTML</a>
+			<a class="tablink" onclick="openPage('Programming')">PROGRAMMING</a>
+			<a class="tablink" onclick="openPage('About')">ABOUT ME</a>
+			<a href="#footer">CONTACT ME</a>
+		</div>
+		<div class="login">
+			<p id="username">Guest</p>
+			<button id="signUp" onclick="logIn()">Log In</button>
+		</div>
+	</div>
+	<div class="section">
+		<div class="box">
+			<div id="form" class="modal">
+				<form id="myForm" class="content animate" >
+					<div class="heading">
+						<span onclick="closeIt()" class="close">&times;</span>
+						<h1>Signing you up</h1>
+					</div>
+					<div class="container">
+						<input id="name" type="text" placeholder="Enter username" name="uname" autocomplete="off" />
+						<input id="password" type="password" placeholder="Enter password" name="psw"/>
+
+						<input type="button" onclick="myAccount()" value="LOGIN">
+					</div>
+				</form>
+			</div>
+			<div class="tabcontent" id="Home">
+				<div class="text">
+					<h1>Hello! Welcome to my Portfolio</h1>
+					<p>This is my Computer System Servicing website project and reciting all programming we've learned through online by developing our own Responsive Website</p>
+				</div>
+				<div class="pic">
+					<img src="images/pc.png">
+					<div class="background"></div>
+				</div>
+			</div>
+			<div class="tabcontent" id="History">
+				<table class="myTable">
+					<thead>
+						<tr>
+							<td><h2>School</h2></td>
+							<td></td>
+						</tr>
+				    </thead>
+				    <tbody>
+						<tr>
+							<td>Primary: </td>
+							<td>Ambago Elementary School<br>S.Y 2017-2018</td>
+						</tr>
+						<tr>
+							<td>Secondary: </td>
+							<td>Butuan City Comprehensive Highschool(BCCHS)<br>S.Y 2021-2022</td>
+						</tr>
+						<tr>
+							<td>Upper Secondary: </td>
+							<td>Pending...(Currrently at BCCHS)</td>
+						</tr>
+						<tr>
+							<td>Tertiary: </td>
+							<td>Not Applicable</td>
+						</tr>
+					</tbody>
+				</table >
+				<table class="myTable">
+					<thead>
+						<tr>
+							<td><h2>School Achievements</h2></td>
+							<td></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Primary: </td>
+							<td>4&times; 1st honors<br>
+							4&times; 3rd honors<br>
+							(That's all I could recall)</td>
+						</tr>
+						<tr>
+							<td>Secondary:</td>
+							<td>2&times; Outstanding Music performer</td>
+						</tr>
+						<tr>
+							<td>Upper Secondary:</td>
+							<td>4&times; With honors<br>
+							1&times; With High Honor</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tabcontent" id="Html">
+				<div class="htmlbox htmlbox1">
+					<div class="code code1">
+						<h2>Code</h2>
+						<img src="images/html1.png" alt="">
+					</div>
+					<div class="desc desc1">
+						<h3>Activity #1</h3>
+						<p>After learning some of the attributes and elements in html, we were given our first activity and it was making our own Resume by developing our website.</p>
+					</div>
+				</div>
+				<div class="htmlbox htmlbox2">
+					<div class="code code2">
+						<h2>Code</h2>
+						<img src="images/html2.png">
+					</div>
+					<div class="desc desc2">
+						<h3>Activity #2</h3>
+						<p>I was so impressed with this activity and gave me the idea of making a log in form without backend development.</p>
+					</div>
+				</div>
+			</div>
+			<div class="tabcontent" id="Programming">
+				<div class="row">
+					<div class="card">
+						<h2>Code</h2>
+						<img src="images/act1.png" alt="">
+						<h2>Result</h2>
+						<img src="images/1result.png" alt="">
+						<div class="container">
+							<h3>Activity #1</h3>
+							<p>This was our First C activity, it shows the potential results to every math symbol of both input number. Notice how my code is so different than others it because I enhanced the code and made it even better(I was bored).</p>
+						</div>
+					</div>
+					<div class="card">
+						<h2>Code</h2>
+						<img src="images/act2.png" alt="">
+						<h2>Results</h2>
+						<img src="images/2plus.png" alt="">
+						<img src="images/2subtract.png" alt="">
+						<img src="images/2divide.png" alt="">
+						<img src="images/2multiply.png" alt="">
+						<img src="images/2error.png" alt="">
+						<div class="container">
+							<h3>Activity #2</h3>
+							<p>This was our Second C activity, and it was my first making simple calculator in one input just like using a calculator.a.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabcontent" id="About">
+				<table class="myTable">
+					<thead>
+						<tr>
+							<td><img src="images/jeson.jpg"></td>
+							<td>Sex: Male</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>First Name:</td>
+							<td>Jeson</td>
+						</tr>
+						<tr>
+							<td>Middle Name:</td>
+							<td>Magadan</td>
+						</tr>
+						<tr>
+							<td>Last Name:</td>
+							<td>Go</td>
+						</tr>
+						<tr>
+							<td>Date of Birth</td>
+							<td>November 18, 2005</td>
+						</tr>
+						<tr>
+							<td>Mother's name:</td>
+							<td>Claire M. Go</td>
+						</tr>
+						<tr>
+							<td>Father's Name:</td>
+							<td>Jessie G. Go</td>
+						</tr>
+						<tr>
+							<td>Address:</td>
+							<td>Purok 6 brgy. Dulag, Butuan City</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="footer">
+		<div class="contact">
+			<h3>CONTACT INFO</h3>
+			<p>Email: jesoncj2005@gmail.com<br>Facebook: <a href="https://www.facebook.com/jeson.m.go">Jeson M. Go</a><br>Contact #: 09070726531</p>
+		</div>
+		<div class="copyright">
+			<h3>Copyright</h3>
+			&copy;Copyright 2023 jeson2005.github.io
+		</div>
+	</div>
+</body>
+</html>
